@@ -2,8 +2,8 @@ import java.util.Scanner;
 
 public class Assignment {
     public static void main (String[] args) {
-//        UsingDataTypes();
-//        UsingConditional();
+        UsingDataTypes();
+        UsingConditional();
         UsingLoop();
     }
     public static void UsingDataTypes (){
