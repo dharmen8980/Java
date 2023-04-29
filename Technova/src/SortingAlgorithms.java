@@ -2,7 +2,7 @@ import java.lang.reflect.Array;
 
 public class SortingAlgorithms {
     public static void main (String[] args){
-        int[] arr = {2,7,3,1,11,15};
+        int[] arr = {2,8,3,9,11,15};
 
         BubbleSort(arr);
         SelectionSort(arr);
@@ -21,8 +21,9 @@ public class SortingAlgorithms {
             swapped = false;
             for(int i=0; i<arr.length-1; i++){
                 if(arr[i]>arr[i+1]){
-                    arr[i] = SwapElements(arr[i], arr[i+1]);
-                    arr[i+1] = SwapElements(arr[i+1], arr[i]);
+                    int temp = arr[i];
+                    arr[i] = arr[i+1];
+                    arr[i+1] = temp;
                     swapped=true;
                 }
             }
@@ -42,7 +43,7 @@ public class SortingAlgorithms {
                     minIndex = j;
                 }
             }
-            arr[i] = SwapElements(arr[i], arr[minIndex]);
+            arr[i] = arr[minIndex];
         }
 
         System.out.print("Result from Selection sort: ");
@@ -51,10 +52,6 @@ public class SortingAlgorithms {
         }
         System.out.println();
 
-    }
-    public static int SwapElements(int first, int second){
-        int temp = second;
-        return first = temp;
     }
 
     public static void Attendance(String[][] attendance){
