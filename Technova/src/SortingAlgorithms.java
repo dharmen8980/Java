@@ -26,6 +26,8 @@ public class SortingAlgorithms {
                     arr[i+1] = temp;
                     swapped=true;
                 }
+                if(!swapped)
+                    break;
             }
         }
         System.out.print("Result from Bubble sort: ");
