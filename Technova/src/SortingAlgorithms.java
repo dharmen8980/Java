@@ -45,7 +45,9 @@ public class SortingAlgorithms {
                     minIndex = j;
                 }
             }
+            int temp = arr[i];
             arr[i] = arr[minIndex];
+            arr[minIndex] = temp;
         }
 
         System.out.print("Result from Selection sort: ");
