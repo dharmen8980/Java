@@ -1,17 +1,18 @@
 import java.lang.reflect.Array;
+import java.util.Arrays;
 
 public class SortingAlgorithms {
     public static void main (String[] args){
-        int[] arr = {2,8,3,9,11,15};
+        int[] arr = {5,4,3,2,1};
 
-        BubbleSort(arr);
+//        BubbleSort(arr);
         SelectionSort(arr);
-        String[][] attendance = {
-                {"John", "present", "present", "present", "absent"},
-                {"Bob","absent", "present", "absent", "present"},
-                {"Peter","absent", "absent", "absent", "present"}};
-
-        Attendance(attendance);
+//        String[][] attendance = {
+//                {"John", "present", "present", "present", "absent"},
+//                {"Bob","absent", "present", "absent", "present"},
+//                {"Peter","absent", "absent", "absent", "present"}};
+//
+//        Attendance(attendance);
     }
 
     public static void BubbleSort (int[] arr){
@@ -26,6 +27,8 @@ public class SortingAlgorithms {
                     arr[i+1] = temp;
                     swapped=true;
                 }
+                if(!swapped)
+                        break;
             }
         }
         System.out.print("Result from Bubble sort: ");
@@ -43,7 +46,9 @@ public class SortingAlgorithms {
                     minIndex = j;
                 }
             }
+            int temp = arr[i];
             arr[i] = arr[minIndex];
+            arr[minIndex] = temp;
         }
 
         System.out.print("Result from Selection sort: ");
