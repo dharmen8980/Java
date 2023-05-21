@@ -1,5 +1,3 @@
-import java.lang.reflect.Array;
-import java.util.Arrays;
 
 public class SortingAlgorithms {
     public static void main (String[] args){
@@ -28,7 +26,7 @@ public class SortingAlgorithms {
                     swapped=true;
                 }
                 if(!swapped)
-                        break;
+                    break;
             }
         }
         System.out.print("Result from Bubble sort: ");
